@@ -11,7 +11,7 @@ services:
       - ./scripts/setup.sql:/docker-entrypoint-initdb.d/setup.sql
       - ./postgres_input_data:/var/lib/postgres/input_data
     ports:
-      - "5432:5432"
+      - ${PG_PORT}:5432
 
   pgadmin_td:
     image: dpage/pgadmin4
@@ -20,4 +20,4 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
     ports:
-      - "9090:80"
+      - ${PGADMIN_PORT}:80
