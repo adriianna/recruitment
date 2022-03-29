@@ -2,6 +2,7 @@
 * [General info](#general-info)
 * [Task1](#task1)
 * [Task2](#task2)
+* [Task3 / Optional task](#task3)
 
 ### General info
 Solution structure:
@@ -20,7 +21,9 @@ recruitment
 │   │   │   project_properties.csv
 │   │   │   project_properties_values.csv
 │   └───scripts
-│       │   setup.sql
+│   │   │   setup.sql
+└───task3
+    │   task3.sql
 ```
 ### Task1
 * Python version: 3.8.10
@@ -61,5 +64,6 @@ docker-compose structure:
  * View: marketing_program
     
 
- 
+### Task3 / Optional task
+ * sql statement can be found in task3.sql
 
