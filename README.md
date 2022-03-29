@@ -2,7 +2,7 @@
 * [General info](#general-info)
 * [Task1](#task1)
 * [Task2](#task2)
-* [Task3 / Optional task](#task3)
+* [Task3 / Optional task](#task3--optional-task)
 
 ### General info
 Solution structure:
