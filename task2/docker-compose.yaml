@@ -1,0 +1,23 @@
+services:
+  pgdatabase_td:
+    image: postgres:14.2
+    container_name: pgdatabase_td
+    environment:
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_DATABASE}
+    volumes:
+      - ./postgres_volume:/var/lib/postgresql/data
+      - ./scripts/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - ./postgres_input_data:/var/lib/postgres/input_data
+    ports:
+      - "5432:5432"
+
+  pgadmin_td:
+    image: dpage/pgadmin4
+    container_name: pgadmin_td
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+    ports:
+      - "9090:80"
